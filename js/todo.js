@@ -9,6 +9,7 @@ function deleteToDo(event) {
   //console.dir에서 부모가 누군지 저장돼 있는key가 parentNode라는것을 발견
   const btn = event.target;
   const li = btn.parentNode;
+  //ul에서 li삭제
   toDoList.removeChild(li);
   //지워진 li를 제외하고 새로운 cleanToDos만들기
   const cleanToDos = toDos.filter(function (toDo) {
@@ -59,7 +60,8 @@ function handleToDoSubmit(event) {
 function loadToDos() {
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if (loadedToDos !== null) {
-    //js가 이해하도록 다시 JSON을 이용해 obj로 parse해주는 것
+    //JSON.stringify()로 인해 localStorage에는 object가 아닌 string형식으로 저장돼 있다.
+    //js가 이해하도록 다시 JSON을 이용해 string을 obj로 parse해주는 것
     const parsedToDos = JSON.parse(loadedToDos);
     /*
 forEach 구문에서 paintToDo를 하나씩 돌리면서
