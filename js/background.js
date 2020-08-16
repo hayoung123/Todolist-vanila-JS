@@ -1,8 +1,9 @@
 const body = document.querySelector("body");
 const IMG_LINK = [
-  "https://cdn.pixabay.com/photo/2014/12/15/17/16/pier-569314_1280.jpg",
-  "https://cdn.pixabay.com/photo/2013/02/21/19/06/beach-84533_1280.jpg",
-  "https://cdn.pixabay.com/photo/2018/06/27/17/48/fantasy-3502188_1280.jpg",
+  "https://cdn.pixabay.com/photo/2013/11/28/10/03/autumn-219972_1280.jpg",
+  "https://cdn.pixabay.com/photo/2016/01/09/18/28/old-1130743_1280.jpg",
+  "https://cdn.pixabay.com/photo/2016/08/09/21/54/yellowstone-national-park-1581879_1280.jpg",
+  "https://cdn.pixabay.com/photo/2015/09/01/06/17/milky-way-916523_1280.jpg",
 ];
 const IMG_NUMBER = IMG_LINK.length;
 function paintImage(imgNumber) {
